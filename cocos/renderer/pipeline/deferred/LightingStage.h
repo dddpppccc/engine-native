@@ -41,11 +41,10 @@ struct DeferredRenderData;
 
 class CC_DLL LightingStage : public RenderStage {
 public:
-    static const RenderStageInfo &getInitializeInfo();
-
     LightingStage();
     ~LightingStage() override;
 
+    static const RenderStageInfo &getInitializeInfo();
     bool initialize(const RenderStageInfo &info) override;
     void activate(RenderPipeline *pipeline, RenderFlow *flow) override;
     void destroy() override;

@@ -40,11 +40,10 @@ struct DeferredRenderData;
 
 class CC_DLL GbufferStage : public RenderStage {
 public:
-    static const RenderStageInfo &getInitializeInfo();
-
     GbufferStage();
     ~GbufferStage() override;
 
+    static const RenderStageInfo &getInitializeInfo();
     bool initialize(const RenderStageInfo &info) override;
     void activate(RenderPipeline *pipeline, RenderFlow *flow) override;
     void destroy() override;
